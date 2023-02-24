@@ -1,0 +1,45 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+.timeline{
+	position: relative;
+	padding-top: em(263);
+	&__body{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: em(950);
+		margin: 0 auto;
+	}
+	&__img{
+		position: relative;
+		margin-top: em(62);
+		width: em(541);
+		height: em(489);
+		img{
+			width: 100%;
+		}
+	}
+}
+
+
+@media (max-width: 1000px){
+	.timeline__img{
+		width: em(631);
+		height: em(579);
+	}
+}
+@media (max-width: 700px){
+	.timeline__img{
+		width: em(931);
+		height: em(879);
+	}
+}

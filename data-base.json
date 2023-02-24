@@ -1,0 +1,58 @@
+{
+	"blogs": [
+		{
+			"preview" : "https://i.imgur.com/s72MM2Q.jpeg",
+			"title" : "Slack and Discord notifications",
+			"subtitle" : "Be the first to know when someone needs your help.",
+			"id" : 1
+		},
+		{
+			"preview" : "https://i.imgur.com/WCGcG8v.jpeg",
+			"title" : "Issue tracking",
+			"subtitle" : "Understand and track the issues people get in touch with you about.",
+			"id" : 2
+		},
+		{
+			"preview" : "https://i.imgur.com/ryKk015.jpeg",
+			"title" : "Themeable chat UI",
+			"subtitle" : "Make your chat feel at home in your product with full control over every chat component.",
+			"id" : 3
+		},
+		{
+			"preview" : "https://i.imgur.com/op2EIXt.jpeg",
+			"title" : "Command + K",
+			"subtitle" : "Help customers twice as fast with our intuitive, keyboard-friendly UI.",
+			"id" : 4
+		},
+		{
+			"preview" : "https://i.imgur.com/nl2Ujog.jpeg",
+			"title" : "Chat as a script tag",
+			"subtitle" : "Get started immediately with our drop-in script tag.",
+			"id" : 5
+		},
+		{
+			"preview" : "https://i.imgur.com/txOKK7A.jpeg",
+			"title" : "Unlimited users",
+			"subtitle" : "Invite as many people as you want. Get the whole company involved in customer support.",
+			"id" : 6
+		},
+		{
+			"preview" : "https://i.imgur.com/YIraFhu.jpeg",
+			"title" : "Manual channel switching",
+			"subtitle" : "Decide when you want to use email or chat to talk to your customers.",
+			"id" : 7
+		},
+		{
+			"preview" : "https://i.imgur.com/Ow7i8by.jpeg",
+			"title" : "Snippets",
+			"subtitle" : "Save templated replies for frequent use.",
+			"id" : 8
+		},
+		{
+			"preview" : "https://i.imgur.com/u8JqXSB.jpeg",
+			"title" : "Notes",
+			"subtitle" : "Easily store internal information on a customer's timeline.",
+			"id" : 9
+		}
+	]
+}

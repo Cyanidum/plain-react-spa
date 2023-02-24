@@ -1,0 +1,152 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+
+.jobs{
+	padding-top: em(100);
+	&__container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: em(50);
+	}
+	&__vacancy-card{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: em(50);
+		border-bottom: em(1) solid #b1b1b1;
+		column-gap: em(65);
+	}
+	&__main{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 70%;
+	}
+	&__role{
+		font-family: 'Roboto';
+		font-size: em(27);
+		color: #000000;
+		font-weight: 800;
+	}
+	&__info{
+		margin-top: em(20);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		row-gap: em(20);
+	}
+	&__type{
+		display: flex;
+		flex-direction: row;
+		column-gap: em(25);
+		span{
+			color: #b1b1b1;
+			font-size: em(20);
+		}
+	}
+	&__btn{
+		color: orange;
+		border: em(1) solid orange;
+		padding: em(10) em(75);
+		transition: .2s ease-in-out;
+		text-transform: uppercase;
+		font-family: 'Roboto';
+		font-weight: 800;
+		font-size: em(21);
+		&:hover{
+			background-color: orange;
+			color: #ffffff;
+		}
+	}
+	&__location{
+		margin-top: em(35);
+		span{
+			position: relative;
+			color: #b1b1b1;
+			font-size: em(20);
+			left: em(30);
+			&:before{
+				position: absolute;
+				content: '';
+				background-image: url(../img/geolocation-marker.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: em(20);
+				height: em(20);
+				top: 50%;
+				left: em(-30);
+				transform: translateY(-50%);
+			}
+		}
+	}
+	.orange{
+		color: orange;
+	}
+}
+@media (max-width: 800px) {
+	.jobs__role{
+		font-size: em(45);
+	}
+	.jobs__type{
+		span{
+			font-size: em(30);
+		}
+	}
+	.jobs__location{
+		span{
+			font-size: em(30);
+		}
+	}
+	.jobs__btn{
+		font-size: em(27);
+	}
+}
+@media (max-width: 500px) {
+	.jobs__role{
+		font-size: em(55);
+	}
+	.jobs__type{
+		span{
+			font-size: em(36);
+		}
+	}
+	.jobs__location{
+		span{
+			font-size: em(36);
+		}
+	}
+	.jobs__btn{
+		font-size: em(35);
+	}
+}
+@media (max-width: 400px) {
+	.jobs__role{
+		font-size: em(62);
+	}
+	.jobs__type{
+		span{
+			font-size: em(42);
+		}
+	}
+	.jobs__location{
+		span{
+			font-size: em(42);
+		}
+	}
+	.jobs__btn{
+		font-size: em(40);
+	}
+}
+

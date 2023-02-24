@@ -1,0 +1,29 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+.name-error,
+.password-error,
+.number-error,
+.email-error{
+	color: red;
+	position: absolute;
+	right: em(210);
+}
+.name-error{
+	top: em(55);
+}
+.password-error{
+	top: em(145);
+}
+.number-error{
+	top: em(235);
+}
+.email-error{
+	top: em(325);
+}

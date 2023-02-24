@@ -1,0 +1,235 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+
+.pricing{
+	height: 100vh;
+	background-image: url(../img/back-2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__trader-1,
+	&__trader-2,
+	&__trader-3{
+		width: em(400);
+		margin: 0 auto;
+		padding: em(30) em(40);
+		background-color: #5b5c55;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-family: 'Roboto';
+	}
+	&__title{
+		text-align: center;
+		padding: em(5) em(10);
+		border-radius: em(5);
+		font-size: em(30);
+		color: white;
+		text-transform: uppercase;
+		background-color: #3b3b38;
+	}
+	&__price{
+		margin-top: em(20);
+		margin-bottom: em(20);
+		font-size: em(30);
+		color: #f1d11a;
+		font-weight: 800;
+		text-align: center;
+	}
+	&__daily,
+	&__monthly,
+	&__referral{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		padding: em(30) 0;
+		border-top: em(1) solid #adadad;
+		span{
+			color: #d8d6d6;
+			font-size: em(16);
+		}
+	}
+	&__button{
+		width: 100%;
+		padding: em(10) 0;
+		background-color: #fff;
+		color: #000000;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: em(20);
+		transition: .2s ease-in-out;
+		border-radius: em(20);
+		&:hover{
+			box-shadow: em(5) em(10) em(15) #adadad;
+		}
+		&:active{
+			transition: .1s ease;
+			background-color: #f1d11a;
+		}
+	}
+}
+
+// swiper styles
+.next,
+.prev{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	overflow: hidden;
+	padding: em(6);
+	border: em(1) solid #FBC639;
+	border-radius: em(50);
+	width: em(50);
+	height: em(50);
+	cursor: pointer;
+	z-index: 999;
+	transition: .1s ease-in-out;
+	user-select: none;
+	&:hover{
+		box-shadow: em(0) em(0) em(15) #FBC639;
+	}
+	img{
+		width: 100%;
+	}
+}
+.next{
+	right: em(410);
+}
+.prev{
+	left: em(410)
+}
+.mySwiper{
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+}
+
+@media (max-width: 1000px) {
+	.pricing__title{
+		font-size: em(32);
+	}
+	.pricing__price{
+		font-size: em(32);
+	}
+	.pricing__daily,
+	.pricing__monthly,
+	.pricing__referral{
+		span{
+			font-size: em(22);
+		}
+	}
+	.pricing__button{
+		font-size: em(23);
+	}
+}
+@media (max-width: 800px) {
+	.pricing__trader-1,
+	.pricing__trader-2,
+	.pricing__trader-3{
+		width: em(700);
+		padding: em(50) em(40);
+	}
+	.pricing__title{
+		font-size: em(34);
+	}
+	.pricing__price{
+		font-size: em(34);
+	}
+	.pricing__daily,
+	.pricing__monthly,
+	.pricing__referral{
+		span{
+			font-size: em(25);
+		}
+	}
+	.pricing__button{
+		font-size: em(25);
+	}
+}
+@media (max-width: 700px) {
+	.pricing__title{
+		font-size: em(37);
+	}
+	.pricing__price{
+		font-size: em(37);
+	}
+	.pricing__daily,
+	.pricing__monthly,
+	.pricing__referral{
+		span{
+			font-size: em(30);
+		}
+	}
+	.pricing__button{
+		font-size: em(30);
+	}
+}
+@media (max-width: 600px) {
+	.pricing__title{
+		font-size: em(57);
+	}
+	.pricing__price{
+		font-size: em(57);
+	}
+	.pricing__daily,
+	.pricing__monthly,
+	.pricing__referral{
+		padding: em(80) 0;
+		span{
+			font-size: em(50);
+		}
+	}
+	.pricing__button{
+		font-size: em(40);
+	}
+	.next,
+	.prev{
+		width: em(100);
+		height: em(100);
+		border-radius: em(100);
+	}
+	.next{
+		right: em(350);
+	}
+	.prev{
+		left: em(350);
+	}
+}
+@media (max-width: 500px) {
+	.pricing__trader-1,
+	.pricing__trader-2,
+	.pricing__trader-3{
+		width: em(900);
+	}
+	.pricing__title{
+		font-size: em(57);
+	}
+	.pricing__price{
+		font-size: em(57);
+	}
+	.pricing__daily,
+	.pricing__monthly,
+	.pricing__referral{
+		padding: em(120) 0;
+		span{
+			font-size: em(60);
+		}
+	}
+	.pricing__button{
+		font-size: em(50);
+	}
+	.next{
+		right: em(250);
+	}
+	.prev{
+		left: em(250);
+	}
+}

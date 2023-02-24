@@ -1,0 +1,129 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+.header{
+	position: relative;
+	padding: em(20);
+	&__main{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo{
+		position: relative;
+		width: em(74);
+		height: em(24);
+		img{
+			width: 100%;
+		}
+	}
+	&__nav{
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: em(24);
+	}
+	&__links{
+		gap: em(23);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	&__links a{
+		color: #ffffff;
+		font-size: em(16);
+		font-family: 'Inter';
+		letter-spacing: em(0.2);
+		transition: 0.3s ease;
+		&:hover{
+			color: #6cf173;
+		}
+	}
+	&__sign{
+		color: #0C0F16;
+		background-color: #ffffff;
+		font-size: em(16);
+		border-radius: em(4);
+		width: em(81);
+		height: em(36);
+		cursor: pointer;
+		transition: .3s ease;
+		&:hover{
+			background-color: #a9e8f8;
+		}
+	}
+}
+
+.active{
+	color: #6cf173;
+}
+
+@media (max-width: 1000px) {
+	.header__logo{
+		width: em(104);
+		height: em(54);
+	}
+	.header__links{
+		font-size: em(20);
+	}
+	.header__sign{
+		font-size: em(20);
+	}
+}
+
+@media (max-width: 800px) {
+	.header__logo{
+		width: em(124);
+		height: em(74);
+	}
+	.header__links{
+		font-size: em(22);
+	}
+	.header__sign{
+		font-size: em(22);
+	}
+}
+@media (max-width: 700px) {
+	.header__logo{
+		width: em(124);
+		height: em(74);
+	}
+	.header__links{
+		font-size: em(24);
+	}
+	.header__sign{
+		font-size: em(24);
+	}
+}
+@media (max-width: 600px) {
+	.header__links{
+		font-size: em(28);
+	}
+	.header__sign{
+		font-size: em(28);
+	}
+}
+@media (max-width: 500px) {
+	.header__links{
+		font-size: em(31);
+	}
+	.header__sign{
+		font-size: em(31);
+	}
+}
+@media (max-width: 400px) {
+	.header__links{
+		font-size: em(36);
+	}
+	.header__sign{
+		font-size: em(36);
+	}
+}
